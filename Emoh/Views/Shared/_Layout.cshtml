@@ -1,0 +1,277 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> سید احسان محمدی - @ViewData["Title"]</title>
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico">
+    <link rel="shortcut icon" href="~/favicon.ico">
+    <meta name="keywords" content="سید احسان,سید احسان محمدی,محمدی,ایمو,آموزش,تدریس,تدریس خصوصی وب,طراحی سایت,طراحی وب سایت,HTML,CSS,JS,Java Script,RWD,Responsive,Bootstrap,jQuery,Ajax,C#,Csharp,ASP.Net MVC,Sql" />
+    <meta name="description" content="ایمو؛ سید احسان محمدی - تدریس خصوصی ، طراحی وب سایت و توسعه نرم افزارهای تحت وب" />
+    <meta property="og:title" content="ایمو - سید احسان محمدی" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="http://www.emoh.ir" />
+    <meta property="og:image" content="http://www.emoh.ir/images/Card-Info/me.jpg" />
+    <meta property="og:description" content="ایمو؛ سید احسان محمدی - تدریس خصوصی ، طراحی وب سایت و توسعه نرم افزارهای تحت وب" />
+    <meta name="twitter:card" content="ایمو؛ سید احسان محمدی" />
+    <meta name="twitter:site" content="@@ehsan8020" />
+    <meta name="twitter:creator" content="@@ehsan8020" />
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="~/css/site.css" />
+        <script src="~/lib/font-awesome/js/fontawesome-all.min.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
+                asp-fallback-src="~/lib/font-awesome/js/fontawesome-all.min.js"
+                integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
+                crossorigin="anonymous">
+        </script>
+    </environment>
+
+    @RenderSection("Styles", required: false)
+
+</head>
+<body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <h5>
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand" title="وب سایت سید احسان محمدی" style="font-size:2rem">
+                    <img src="~/images/Template/brand.jpg" width="40" alt="سید احسان محمدی - ایمو" class="rounded-circle border border-info">
+                    ایمو
+                </a>
+            </h5>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                    <li><hr class="mb-0 bg-light" /></li>
+                    <li class="nav-item active pl-5">
+                        <a asp-area="" asp-controller="Home" asp-action="Index" class="nav-link text-light">
+                            <i class="fa fa-home fa-2x align-middle"></i>
+                            <span class="linkText">خانه</span>
+                        </a>
+                    </li>
+                    <li><hr class="my-0 bg-secondary" /></li>
+                    <li class="nav-item pl-5">
+                        <a asp-area="" asp-controller="Home" asp-action="Guidance" class="nav-link text-success">
+                            <i class="fa fa-info-circle fa-2x align-middle"></i>
+                            <span class="linkText">راهنمای دامنه ها</span>
+                        </a>
+                    </li>
+                    <li><hr class="my-0 bg-secondary" /></li>
+                    <li class="nav-item pl-5">
+                        <a asp-area="" asp-controller="Home" asp-action="Download" class="nav-link text-warning">
+                            <i class="fa fa-download fa-2x align-middle"></i>
+                            <span class="linkText">مرکز دانلود</span>
+                        </a>
+                    </li>
+                    <li><hr class="my-0 bg-secondary" /></li>
+                    <li class="nav-item pl-5">
+                        <a asp-area="" asp-controller="Home" asp-action="Links" class="nav-link text-info">
+                            <i class="fa fa-link fa-2x align-middle"></i>
+                            <span class="linkText">پیوندهای مفید</span>
+                        </a>
+                    </li>
+                    <li><hr class="my-0 bg-secondary" /></li>
+                    <li class="nav-item pl-5">
+                        <a asp-area="" asp-controller="Home" asp-action="ContactMe" class="nav-link text-danger">
+                            <i class="fa fa-envelope fa-2x align-middle"></i>
+                            <span class="linkText">ارتباط با من</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="mt-4 mb-5">&nbsp;</div>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-md-3 mb-2">
+                <div class="card bg-dark text-light text-right h-100">
+                    <div class="card-header"><h2 style="font-size:1.5rem"><i class="far fa-address-card align-middle text-danger"></i> معرفی</h2></div>
+                    <img class="card-img-top" src="~/images/Card-Info/me.jpg" alt="سید احسان محمدی - ایمو">
+                    <div class="card-body">
+                        <h1 id="introTitle" class="card-title" style="font-size:1.5rem">سید احسان محمدی</h1>
+                        <p class="card-text">
+                            <ul style="list-style:none outside">
+                                <li>
+                                    <h5 title="وب سایت آموزشی سید احسان محمدی"><i class="fab fa-internet-explorer align-middle text-info"></i> طراحی وب سایت</h5>
+                                </li>
+                                <li>
+                                    <h5 title="وب سایت آموزشی سید احسان محمدی"><i class="fas fa-user-graduate align-middle text-info"></i> تدریس خصوصی</h5>
+                                </li>
+                                <li>
+                                    <h5 title="وب سایت آموزشی سید احسان محمدی"><i class="fas fa-chalkboard-teacher align-middle text-info"></i> تدریس عمومی</h5>
+                                </li>
+                                <li>
+                                    <h5 title="وب سایت آموزشی سید احسان محمدی"><i class="fas fa-user-friends align-middle text-info"></i> مشاوره ی برنامه نویسی</h5>
+                                </li>
+                            </ul>
+                        </p>
+                        <p class="card-text text-center">
+                            <a asp-area="" asp-controller="Home" asp-action="ContactMe" class="btn btn-outline-info w-75">ارسال درخواست</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-9">
+
+                <div class="card bg-dark text-light text-right">
+                    <div class="card-header"><h2 style="font-size:1.5rem"><i class="fas fa-code align-middle text-danger"></i> نمونه هایی از سایت دانشجویان</h2></div>
+
+                    <div id="carouselExampleIndicators" class="carousel slide border border-dark" data-ride="carousel">
+                        <ol class="carousel-indicators">
+                            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active bg-danger"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="1" class="bg-danger"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="2" class="bg-danger"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="3" class="bg-danger"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="4" class="bg-danger"></li>
+                            <li data-target="#carouselExampleIndicators" data-slide-to="5" class="bg-danger"></li>
+                        </ol>
+                        <div class="carousel-inner">
+                            <div class="carousel-item active">
+                                <img class="d-block w-100" src="~/images/Carousel/marjantorabi.com.png">
+                                <div class="carousel-caption d-none d-md-block bg-dark rounded">
+                                    <h5>وب سایت خانم مرجان ترابی</h5>
+                                    <a href="http://marjantorabi.com" class="badge badge-warning" target="_blank">
+                                        <i class="fa fa-globe"></i> مشاهده سایت
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="~/images/Carousel/rozbehkiya.ir.png">
+                                <div class="carousel-caption d-none d-md-block bg-dark rounded">
+                                    <h5>وب سایت خانم زهرا سوارآبادی</h5>
+                                    <a href="http://rozbehkiya.ir" class="badge badge-warning" target="_blank">
+                                        <i class="fa fa-globe"></i> مشاهده سایت
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="~/images/Carousel/majidkh.emoh.ir.png">
+                                <div class="carousel-caption d-none d-md-block bg-dark rounded">
+                                    <h5>وب سایت آقای مجید خالقیان</h5>
+                                    <a href="http://majidkh.emoh.ir" class="badge badge-warning" target="_blank">
+                                        <i class="fa fa-globe"></i> مشاهده سایت
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="~/images/Carousel/salehi.emoh.ir.png">
+                                <div class="carousel-caption d-none d-md-block bg-dark rounded">
+                                    <h5>وب سایت آقای سعید صالحی</h5>
+                                    <a href="http://salehi.emoh.ir" class="badge badge-warning" target="_blank">
+                                        <i class="fa fa-globe"></i> مشاهده سایت
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="~/images/Carousel/rezvanbook.ir.png">
+                                <div class="carousel-caption d-none d-md-block bg-dark rounded">
+                                    <h5>وب سایت خانم رضوانه خسروآبادی</h5>
+                                    <a href="http://rezvanbook.ir" class="badge badge-warning" target="_blank">
+                                        <i class="fa fa-globe"></i> مشاهده سایت
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="carousel-item">
+                                <img class="d-block w-100" src="~/images/Carousel/u3efi.ir.png">
+                                <div class="carousel-caption d-none d-md-block bg-dark rounded">
+                                    <h5>وب سایت خانم نیلوفر یوسفی</h5>
+                                    <a href="http://u3efi.ir" class="badge badge-warning" target="_blank">
+                                        <i class="fa fa-globe"></i> مشاهده سایت
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                            <span class="carousel-control-prev-icon bg-danger"></span>
+                        </a>
+                        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                            <span class="carousel-control-next-icon bg-danger"></span>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        @RenderBody()
+
+        <hr class="bg-light" />
+        <footer>
+            <h5 class="text-center text-secondary">
+                <i class="fas fa-quote-right align-middle"></i>
+                ایمو - سید احسان محمدی
+                <i class="fas fa-quote-left align-middle"></i>
+            </h5>
+            <h3 class="text-center">
+                <a href="http://telegram.me/ehsan8020" target="_blank" class="text-info"><i class="fab fa-telegram" title="تلگرام من"></i></a>&nbsp;&nbsp;
+                <a href="http://instagram.com/ehsan.mohamaddi" target="_blank" class="text-warning"><i class="fab fa-instagram" title="اینستاگرام من"></i></a>&nbsp;&nbsp;
+                <a href="http://twitter.com/ehsan8020" target="_blank" class="text-success"><i class="fab fa-twitter" title="توییتر من"></i></a>&nbsp;&nbsp;
+                <a href="http://facebook.com/ehsan8020" target="_blank" class="text-primary"><i class="fab fa-facebook" title="فیسبوک من"></i></a>&nbsp;&nbsp;
+                <a href="mailto:ehsan8020@gmail.com?subject=Message From Emoh.IR" target="_blank" title="ایمیل من" class="text-danger"><i class="far fa-envelope"></i></a>&nbsp;&nbsp;
+            </h3>
+        </footer>
+    </div>
+
+    <div id="goTop" title="برو به بالا"> <i class="fas fa-arrow-circle-up fa-4x text-danger border-dark"></i></div>
+
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery-3.3.1.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/popper.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery-3.3.1.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous">
+        </script>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/popper.min.js"
+                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+                crossorigin="anonymous">
+        </script>
+
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+                crossorigin="anonymous">
+        </script>
+    </environment>
+    <script>
+        $(function () {
+            //BS Tooltip
+            $('[data-toggle="tooltip"]').tooltip();
+            //Go To Top
+            $(document).scroll(function () {
+                if ($(this).scrollTop() > 1500)
+                    $('#goTop').css('display', 'block');
+                else
+                    $('#goTop').css('display', 'none');
+            });
+            $('#goTop').click(function () {
+                $('html,body').animate({ scrollTop: 0 }, 1000);
+            });
+        });
+
+    </script>
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

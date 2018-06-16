@@ -1,0 +1,66 @@
+﻿@{
+    ViewData["Title"] = "خانه";
+}
+
+@section Styles
+    {
+    <environment include="Development">
+        @*For Loading Domains*@<link href="~/lib/jquery-ui-1.12.1/jquery-ui.min.css" rel="stylesheet" />
+    </environment>
+    <environment exclude="Development">
+        @*For Loading Domains*@<link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
+    </environment>
+    @*For Loading Domains*@
+    <style>#progressbar .ui-progressbar-value {background-color: #f00;}</style>
+}
+
+<div class="row justify-content-center my-3">
+    <div class="col-md">
+        <h4 class="alert alert-primary text-center">
+            <i class="far fa-hand-point-down fa-flip-horizontal align-middle"></i> وب سایت دانشجویان <i class="far fa-hand-point-down align-middle"></i>
+        </h4>
+    </div>
+</div>
+
+<div id="appendingPlaceholder"></div>
+
+<div id="moreDiv" class="row justify-content-center mt-4">
+
+    <div class="col-md-4">
+        <div id="progressbar"></div>
+        <button style="display:none" id="moreButton" type="button" class="btn btn-outline-danger w-100" data-turn="1">مشاهده بیشتر <i class="fas fa-chevron-circle-down align-middle"></i></button>
+    </div>
+</div>
+@section Scripts
+    {
+
+
+    <environment include="Development">
+        @*For Loading Domains*@
+        <script src="~/lib/jquery-ui-1.12.1/jquery-ui.min.js"></script>
+    </environment>
+    <environment exclude="Development">
+        @*For Loading Domains*@
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    </environment>
+
+    <script src="~/js/api-loader.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("#progressbar").progressbar({
+                value: false
+            });
+
+            //First Time
+            sendRequest(1);
+
+            //Next Times
+            $('#moreDiv').on('click', '#moreButton', function () {
+                var btn = $(this);
+                btn.attr('data-turn', parseInt(btn.attr('data-turn')) + 1);
+                sendRequest(btn.attr('data-turn'));
+            });
+        });
+    </script>
+}

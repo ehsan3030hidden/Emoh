@@ -1,0 +1,84 @@
+﻿
+@{
+    ViewData["Title"] = "راهنمای دامنه ها";
+}
+<div class="row">
+    <div class="col-md-12">
+        <div class="card bg-light text-dark text-right h-100">
+            <div class="card-header"><h2 style="font-size:1.5rem;"><i class="fa fa-info-circle align-middle text-success"></i> @ViewData["Title"]</h2></div>
+            <div class="card-body">
+                <p class="card-text">
+                    <h5 style="line-height:2.5rem">
+                        برای ارسال و دریافت فایل ها و فولدرهای موجود در سیستم محلی (Local) از/به سیستم سرور (Hosting) روش های مختلفی وجود دارد.
+                        یکی از این روش ها، برقراری ارتباط از طریق پروتکل FTP می باشد.
+                        از این رو سری نرم افزارهای FTP در سراسر جهان معرفی گردیدند که به عملیات انتقال و مدیریت فایل بر بستر این پروتکل سهولت می بخشند.
+                        <br>
+                        یکی از این نرم افزارها که نسبتا محیط ساده تر و قدرتمندتری در خود دارد از
+                        <a href="http://ehsan3030.persiangig.com/CuteFtp_v8.zip">اینجا</a>
+                        قابل دریافت است. به هر حال همه این نرم افزارها برای برقراری ارتباط به سه آیتم نیازمند می باشند :
+                        <br>
+
+                    </h5>
+                    <br />
+
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-secondary">
+                            <i class="fas fa-map-marker align-middle text-success"></i> FTP Address یا FTP Url یا Host Address<br />
+                            همان آدرس FTP سرور می باشد.
+                            برای ساب دامین های فراگیران این آدرس به شکل ftp://sample.emoh.ir می باشد که به جای کلمه sample باید نام ساب دامینی که تحویل داده شده است قرار گیرد.
+                        </li>
+                        <li class="list-group-item list-group-item-dark">
+                            <i class="fas fa-user align-middle text-success"></i> Username <br />
+                            همان نام کاربری به منظور تعیین هویت فردی که قصد برقراری ارتباط را دارد، بکار می رود. این مورد برای همه فراگیران همان نام ساب دامین می باشد که به آخرش عدد 1 افزوده شده است. برای مثال :  sample1
+                        </li>
+                        <li class="list-group-item list-group-item-secondary">
+                            <i class="fas fa-key align-middle text-success"></i> Password <br />
+                            همان کلمه عبور که مانند مورد قبلی به جهت اعتبارسنجی کاربرد دارد. این مورد به صورت شخصی به فراگیران تحویل می گردد. بدیهی است که این مورد باید امن نگه داری شود.
+                        </li>
+                    </ul>
+                    <br /><br />
+
+                </p>
+
+                <div class="card-text alert alert-success border-success">
+                    <h5 class=" text-danger">
+                        <i class="fas fa-2x fa-exclamation-triangle align-middle"></i>
+                        توجه :
+                    </h5>
+                    <ul style="list-style-type:none;line-height:2rem">
+                        <li>
+                            <i class="fas fa-check align-middle text-danger"></i>
+                            برای دسترسی به ساب دامین از طریق پروتکل http (مشاهده سایت)، توجه گردد که www نباید در اول URL آن قرار بگیرد.
+                        </li>
+                        <li>
+                            <i class="fas fa-check align-middle text-danger"></i>
+                            نرم افزارهای FTP معمولا از کلماتی مانند Upload، Put و... برای ارسال فایل از سیستم لوکال به سرور و همچنین از کلماتی مانند Download، Get و ... برای دریافت فایل از سرور به لوکال استفاده می کنند.
+                        </li>
+                        <li>
+                            <i class="fas fa-check align-middle text-danger"></i>
+                            بعد از اتصال به سرور، محیطی که مشاهده خواهید نمود محتوای فولدر ریشه (Root) وب سایت شما خواهد بود که در واقع فایل ها و فولدرهای وب سایت باید در این فولدر قرار گیرند.
+                            [معمولا در وب سرورهای ویندوز این فولدر httpdocs و در وب سرورهای لینوکس این فولدر public_html نام دارد.]
+                        </li>
+                        <li>
+                            <i class="fas fa-check align-middle text-danger"></i>
+                            در محیط فولدر ریشه، فایلها و فولدرهایی مشاهده خواهید نمود که به صورت خودکار توسط سرور ایجاد گردیده اند.
+                            شما می توانید آنها را حذف نمایید و فایلهای خود را جایگزین نمایید.
+                        </li>
+                        <li>
+                            <i class="fas fa-check align-middle text-danger"></i>
+                            حتما باید نام صفحه اصلی وبسایت index.html و یا index.htm باشد. در غیراین صورت وبسایت قابل مشاهده نخواهد بود.
+                        </li>
+                        <li>
+                            <i class="fas fa-check align-middle text-danger"></i>
+                            توجه : برقراری ارتباط با سرور از طریق پروتکل FTP حتی بدون نرم افزار جانبی و از طریق محیط خود ویندوز هم می تواند صورت بپذیرد.
+                            برای این منظور کافیست در Address Bar مربوط به پنجره File Explorer ، پارامتر FTP Address را و سپس در پنجره باز شده ی دوم پارامترهای Username و Password را وارد نمود.
+                        </li>
+                    </ul>
+                    <a class="btn btn-success" href="http://ehsan3030.persiangig.com/How-To-Create-And-Upload-A-Website.zip/download?38b9">
+                        فیلم آموزشی نحوه ساخت و آپلود سایت
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
