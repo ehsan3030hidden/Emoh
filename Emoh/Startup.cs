@@ -41,7 +41,18 @@ namespace Emoh
                 app.UseExceptionHandler("/Home/Error");
             }
 
-            app.UseStaticFiles(); 
+            //default form
+            //app.UseStaticFiles(); 
+
+            //Caching Static Files
+            app.UseStaticFiles(new StaticFileOptions
+            {
+                OnPrepareResponse = ctx =>
+                {
+                    const int durationInSeconds = 60 * 60 * 24 * 365; //1 Year
+                    ctx.Context.Response.Headers[Microsoft.Net.Http.Headers.HeaderNames.CacheControl] = "public,max-age=" + durationInSeconds;
+                }
+            });
 
             app.UseMvc(routes =>
             {
