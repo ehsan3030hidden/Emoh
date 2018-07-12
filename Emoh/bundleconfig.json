@@ -20,5 +20,11 @@
     "inputFiles": [
       "wwwroot/js/JavaScript.js"
     ]
+  },
+  {
+    "outputFileName": "wwwroot/js/api-loader.min.js",
+    "inputFiles": [
+      "wwwroot/js/api-loader.js"
+    ]
   }
 ]

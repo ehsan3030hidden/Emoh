@@ -16,28 +16,17 @@
     <meta name="twitter:card" content="ایمو؛ سید احسان محمدی" />
     <meta name="twitter:site" content="@@ehsan8020" />
     <meta name="twitter:creator" content="@@ehsan8020" />
-
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
         <link rel="stylesheet" href="~/css/site.css" />
-        <script src="~/lib/font-awesome/js/fontawesome-all.min.js"></script>
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css"
               asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
-
         <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
-
-        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js"
-                asp-fallback-src="~/lib/font-awesome/js/fontawesome-all.min.js"
-                integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe"
-                crossorigin="anonymous">
-        </script>
     </environment>
-
     @RenderSection("Styles", required: false)
-
 </head>
 <body>
     <div class="container-fluid">
@@ -51,7 +40,6 @@
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
                 <span class="navbar-toggler-icon"></span>
             </button>
-
             <div class="collapse navbar-collapse text-right" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto">
                     <li><hr class="mb-0 bg-light" /></li>
@@ -206,9 +194,7 @@
                 </div>
             </div>
         </div>
-
         @RenderBody()
-
         <hr class="bg-light" />
         <footer>
             <h5 class="text-center text-secondary">
@@ -225,53 +211,22 @@
             </h3>
         </footer>
     </div>
-
     <div id="goTop" title="برو به بالا"> <i class="fas fa-arrow-circle-up fa-4x text-danger border-dark"></i></div>
-
-
     <environment include="Development">
         <script src="~/lib/jquery/dist/jquery-3.3.1.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/popper.min.js"></script>
         <script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+        <script src="~/lib/font-awesome/js/fontawesome-all.min.js"></script>
     </environment>
     <environment exclude="Development">
-        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
-                asp-fallback-src="~/lib/jquery/dist/jquery-3.3.1.min.js"
-                asp-fallback-test="window.jQuery"
-                crossorigin="anonymous">
-        </script>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/popper.min.js"
-                integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
-                crossorigin="anonymous">
-        </script>
-
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"
-                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
-                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
-                integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
-                crossorigin="anonymous">
-        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js" asp-fallback-src="~/lib/jquery/dist/jquery-3.3.1.min.js" asp-fallback-test="window.jQuery" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" asp-fallback-src="~/lib/bootstrap/dist/js/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js" asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T" crossorigin="anonymous"></script>
+        <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" asp-fallback-src="~/lib/font-awesome/js/fontawesome-all.min.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script>
     </environment>
     <script>
-        $(function () {
-            //BS Tooltip
-            $('[data-toggle="tooltip"]').tooltip();
-            //Go To Top
-            $(document).scroll(function () {
-                if ($(this).scrollTop() > 1500)
-                    $('#goTop').css('display', 'block');
-                else
-                    $('#goTop').css('display', 'none');
-            });
-            $('#goTop').click(function () {
-                $('html,body').animate({ scrollTop: 0 }, 1000);
-            });
-        });
-
+        $(function () {$('[data-toggle="tooltip"]').tooltip();$(document).scroll(function () {if ($(this).scrollTop() > 1500) $('#goTop').css('display', 'block'); else $('#goTop').css('display', 'none');});$('#goTop').click(function () {$('html,body').animate({ scrollTop: 0 }, 1000);});});
     </script>
     @RenderSection("Scripts", required: false)
-
 </body>
 </html>
