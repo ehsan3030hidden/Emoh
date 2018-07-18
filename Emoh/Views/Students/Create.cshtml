@@ -1,0 +1,50 @@
+﻿@model Emoh.Models.Student
+
+@{
+    ViewData["Title"] = "افزودن دانشجو";
+}
+
+
+<div class="row bg-light">
+    <div class="col-md-4 text-right my-3">
+        <h3>افزودن دانشجو</h3>
+        <hr />
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label">نام : </label>
+                <input asp-for="FirstName" class="form-control" placeholder="نام را وارد نمایید" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label">نام خانوادگی : </label>
+                <input asp-for="LastName" class="form-control" placeholder="نام خانوادگی را وارد نمایید" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Course" class="control-label">دوره : </label>
+                <input asp-for="Course" class="form-control" placeholder="دوره را وارد نمایید" />
+                <span asp-validation-for="Course" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ImageName" class="control-label">عکس : </label>
+                <input asp-for="ImageName" class="form-control" value="1.jpg" style="direction:ltr" />
+                <span asp-validation-for="ImageName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SiteUrl" class="control-label">آدرس سایت : </label>
+                <input asp-for="SiteUrl" class="form-control" value="http://site.emoh.ir" style="direction:ltr"  />
+                <span asp-validation-for="SiteUrl" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <div class="checkbox"><label><input asp-for="Gender" /> مرد می باشد</label></div>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-outline-success"><i class="fas fa-user-plus"></i> افزودن دانشجو</button>
+                <a asp-action="Index" class="btn btn-outline-primary"><i class="fas fa-share-square"></i> بازگشت به صفحه اصلی</a>
+            </div>
+        </form>
+    </div>
+</div>
+
+

@@ -25,6 +25,10 @@ namespace Emoh
         {
             //My Code -> Added For Web Api (Equals to EmohContext Constructor)
             services.AddDbContext<EmohContext>(opt => opt.UseSqlServer(Emoh.Helpers.Constants.RemoteEmohConnectionString));
+
+            //My Code = DI COntainer
+            services.AddTransient<Models.Interfaces.IStudentRepository, Models.Repositories.StudentRepository>();
+
             services.AddMvc();
         }
 
@@ -40,7 +44,6 @@ namespace Emoh
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-
             //default form
             //app.UseStaticFiles(); 
 

@@ -16,11 +16,10 @@ namespace Emoh.Models
         {
         }
 
-
         //My Code -> For migration and its connection string
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer(Emoh.Helpers.Constants.RemoteEmohConnectionString);
+            optionsBuilder.UseSqlServer(Emoh.Helpers.Constants.LocalEmohConnectionString);
         }
         public DbSet<Student> Students { get; set; }
     }

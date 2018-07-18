@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Student>
+@{
+    ViewData["Title"] = "نمایش دانشجویان";
+}
+
+<div class="row mt-4">
+    <div class="col-md text-right">
+        <a asp-controller="Students" asp-action="Create" class="btn btn-success btn-large mb-3"><i class="fas fa-user-plus"></i> افزودن دانشجو</a>
+        <table class="table table-hover table-light table-striped table-bordered text-center">
+            <thead class="bg-dark text-light">
+                <tr><th>نام</th><th>نام خانوادگی</th><th>جنیست</th><th>دوره</th><th>آدرس سایت</th><th>ویرایش</th><th>حذف</th></tr>
+            </thead>
+            <tbody>
+                @if (Model.Any())
+                {
+                    @foreach (var student in Model)
+                    {
+                        <tr>
+                            <td>@student.FirstName</td>
+                            <td>@student.LastName</td>
+                            <td>
+                                @if (student.Gender)
+                                {<text>مرد</text>}
+                            else
+                            {<text>زن</text>}
+                            </td>
+                            <td>@student.Course</td>
+                            <td><a href="@student.SiteUrl" target="_blank">@student.SiteUrl</a></td>
+                            <td>
+                                <a asp-action="Update" asp-route-id="@student.Id" class="btn btn-outline-warning">
+                                    <i class="fas fa-user-edit"></i>
+                                </a>
+                            </td>
+                            <td>
+                                <a asp-action="Delete" asp-route-id="@student.Id" class="btn btn-outline-danger">
+                                    <i class="fas fa-user-times"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                }
+                else{<tr><td colspan="7">هیچ دانشجویی ثبت نشده است.</td></tr>}
+            <tbody>
+        </table>
+    </div>
+</div>

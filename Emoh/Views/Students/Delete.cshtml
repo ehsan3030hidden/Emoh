@@ -1,0 +1,35 @@
+﻿@model Emoh.Models.Student
+
+@{
+    ViewData["Title"] = "حذف دانشجو";
+}
+
+<div class="row mt-4">
+    <div class="col-md text-right bg-light p-5">
+        <h5>
+            آیا مطمین به حذف دانشجو با این مشخصات هستید :
+        </h5>
+        <ul class="list-group my-3">
+            <li class="list-group-item">@Model.FirstName</li>
+            <li class="list-group-item bg-secondary">@Model.LastName</li>
+            <li class="list-group-item">
+                @if (Model.Gender)
+                {<text>مرد</text>}
+            else
+            {<text>زن</text>}
+            </li>
+            <li class="list-group-item bg-secondary">@Model.Course</li>
+            <li class="list-group-item"><a href="@Model.SiteUrl" target="_blank">@Model.SiteUrl</a></li>
+        </ul>
+        <form asp-action="DeleteConfirmed">
+            <input type="hidden" asp-for="Id" />
+            <button type="submit" class="btn btn-outline-danger"><i class="fas fa-user-times"></i> حذف دانشجو</button>
+            <a asp-action="Index" class="btn btn-outline-primary"><i class="fas fa-share-square"></i> بازگشت به صفحه اصلی</a>
+        </form>
+    </div>
+</div>
+
+
+
+
+
