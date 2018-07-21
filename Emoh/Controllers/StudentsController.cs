@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace Emoh.Controllers
 {
+    [Authorize]
     public class StudentsController : Controller
     {
         private readonly Models.Interfaces.IStudentRepository _repo;

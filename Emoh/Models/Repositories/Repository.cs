@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Emoh.Models.Interfaces;
+using Emoh.Data;
 
 namespace Emoh.Models.Repositories
 {
     public class Repository<T> : IRepository<T> where T : class
     {
-        protected readonly EmohContext _db;
-        public Repository(EmohContext db)
+        protected readonly ApplicationDbContext _db;
+        public Repository(ApplicationDbContext db)
         {
             _db = db;
         }

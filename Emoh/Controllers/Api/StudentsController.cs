@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Emoh.Models;
+using Emoh.Data;
 
 namespace Emoh.Controllers.Api
 {
@@ -12,9 +13,9 @@ namespace Emoh.Controllers.Api
     [Route("api/Students")]
     public class StudentsController : Controller
     {
-        private readonly EmohContext _context;
+        private readonly ApplicationDbContext _context;
 
-        public StudentsController(EmohContext context)
+        public StudentsController(ApplicationDbContext context)
         {
             _context = context;
         }

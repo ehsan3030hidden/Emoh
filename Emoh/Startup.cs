@@ -3,11 +3,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+//using Emoh.Data;
 using Emoh.Models;
+using Emoh.Services;
+using Emoh.Data;
 
 namespace Emoh
 {
@@ -23,11 +27,14 @@ namespace Emoh
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            //My Code -> Added For Web Api (Equals to EmohContext Constructor)
-            services.AddDbContext<EmohContext>(opt => opt.UseSqlServer(Emoh.Helpers.Constants.RemoteEmohConnectionString));
+            services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlServer(Helpers.Constants.LocalEmohConnectionString));
 
-            //My Code = DI COntainer
+            services.AddIdentity<ApplicationUser, IdentityRole>()
+                .AddEntityFrameworkStores<ApplicationDbContext>()
+                .AddDefaultTokenProviders();
+
             services.AddTransient<Models.Interfaces.IStudentRepository, Models.Repositories.StudentRepository>();
+            services.AddTransient<IEmailSender, EmailSender>();
 
             services.AddMvc();
         }
@@ -37,17 +44,15 @@ namespace Emoh
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
                 app.UseBrowserLink();
+                app.UseDeveloperExceptionPage();
+                app.UseDatabaseErrorPage();
             }
             else
             {
                 app.UseExceptionHandler("/Home/Error");
             }
-            //default form
-            //app.UseStaticFiles(); 
 
-            //Caching Static Files
             app.UseStaticFiles(new StaticFileOptions
             {
                 OnPrepareResponse = ctx =>
@@ -56,6 +61,8 @@ namespace Emoh
                     ctx.Context.Response.Headers[Microsoft.Net.Http.Headers.HeaderNames.CacheControl] = "public,max-age=" + durationInSeconds;
                 }
             });
+
+            app.UseAuthentication();
 
             app.UseMvc(routes =>
             {
