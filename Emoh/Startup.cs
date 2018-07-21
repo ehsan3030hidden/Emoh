@@ -27,7 +27,7 @@ namespace Emoh
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlServer(Helpers.Constants.LocalEmohConnectionString));
+            services.AddDbContext<ApplicationDbContext>(opt => opt.UseSqlServer(Helpers.Constants.RemoteEmohConnectionString));
 
             services.AddIdentity<ApplicationUser, IdentityRole>()
                 .AddEntityFrameworkStores<ApplicationDbContext>()
