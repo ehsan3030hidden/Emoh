@@ -1,0 +1,97 @@
+﻿using Microsoft.EntityFrameworkCore.Migrations;
+using System;
+using System.Collections.Generic;
+
+namespace Emoh.Data.Migrations
+{
+    public partial class AddPrimaryStudentsRecords : Migration
+    {
+        protected override void Up(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.Sql(@"
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مهر 1394', N'شایان', 1, N'6.jpg', N'سلیم زاده', N'http://shayan.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مهر 1394', N'زهرا', 0, N'7.jpg', N'کاروان', N'http://karvan.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'بهمن 1394', N'مریم', 0, N'8.jpg', N'سلطان محمدی', N'http://m.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'بهمن 1394', N'مهیار', 1, N'1.jpg', N'حسنعلی پور', N'http://mh.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'اسفند 1394', N'فرشاد', 1, N'2.jpg', N'خلیلی', N'http://farshad.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'اسفند 1394', N'فاطمه', 0, N'3.jpg', N'آهی', N'http://faa.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'اسفند 1394', N'مدیا سادات', 0, N'4.jpg', N'ابطحی', N'http://media.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'اسفند 1394', N'مینا', 0, N'5.jpg', N'حاجی صفری', N'http://mina.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'اسفند 1394', N'زهرا', 0, N'6.jpg', N'مهدوی', N'http://mah.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'اسفند 1394', N'پگاه', 0, N'7.jpg', N'ترابی', N'http://torabi.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'اسفند 1394', N'سعیده', 0, N'8.jpg', N'سوری', N'http://soori.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'اسفند 1394', N'الهه', 0, N'1.jpg', N'کرم زاده', N'http://elikzm.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'اسفند 1394', N'پوریا', 1, N'2.jpg', N'نایب', N'http://pna.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'اسفند 1394', N'زهره', 0, N'3.jpg', N'فتح الهی', N'http://pajoohesh.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'اسفند 1394', N'مهتاب', 0, N'4.jpg', N'مرادی', N'http://mhtb.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'تیر 1395', N'پریناز', 0, N'5.jpg', N'نیکنامی', N'http://niknam.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'تیر 1395', N'راهله', 0, N'6.jpg', N'رنجبران', N'http://ra-it.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'تیر 1395', N'محمد', 1, N'7.jpg', N'محمد نژاد', N'http://mnejad.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'تیر 1395', N'رضوان', 0, N'8.jpg', N'برومند', N'http://boroumand.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'تیر 1395', N'سمانه', 0, N'1.jpg', N'احمدی', N'http://s-ahmadi.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'تیر 1395', N'امیر رضا', 1, N'2.jpg', N'کریملو', N'http://ramink.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'تیر 1395', N'مجید', 1, N'3.jpg', N'خالقیان', N'http://majidkh.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'تیر 1395', N'فرشاد', 1, N'4.jpg', N'بختیاری', N'http://farshadpio.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'امیر محمد', 1, N'5.jpg', N'غریبی پور', N'http://gharib.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'پریسا', 0, N'6.jpg', N'مظفری', N'http://parisa96.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'زینب', 0, N'7.jpg', N'خسروی', N'http://zeinab96.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'مریم', 0, N'8.jpg', N'جعفریان', N'http://jafari.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'ندا', 0, N'1.jpg', N'رسولی', N'http://asemanet.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'سجاد', 1, N'2.jpg', N'فراهی', N'http://sajadfarahi.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'فرهاد', 1, N'3.jpg', N'شریفی', N'http://farad.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'امیر', 1, N'4.jpg', N'حسین قلی خانی', N'http://gholikhani.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'علیرضا', 1, N'5.jpg', N'فلاحی', N'http://alireza-fl.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'امیر', 1, N'6.jpg', N'زارع', N'http://eghma.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'حسن', 1, N'7.jpg', N'تسبیحی', N'http://majidadmin.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'سینا', 1, N'8.jpg', N'رستمی', N'http://sina.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'سارا', 0, N'1.jpg', N'امینی', N'http://sraxd.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1395', N'پریسا', 0, N'2.jpg', N'بلوریان', N'http://parisabn.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'دی 1395', N'شیوا', 0, N'3.jpg', N'متقی', N'http://shiva.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'دی 1395', N'هادی', 1, N'4.jpg', N'رضوانی', N'http://hadi.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'دی 1395', N'شهرزاد', 0, N'5.jpg', N'سراج انصاری', N'http://sheri.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'دی 1395', N'شهاب', 1, N'6.jpg', N'صدری', N'http://shahab.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1396', N'زهرا', 0, N'7.jpg', N'سوار آبادی', N'http://zahrasa.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1396', N'فاطمه', 0, N'8.jpg', N'عظیمی', N'http://azimi.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1396', N'نیلوفر', 0, N'1.jpg', N'یوسفی', N'http://nilooabc.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1396', N'مهسا', 0, N'2.jpg', N'زینالی', N'http://mahsa68.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1396', N'سعید', 1, N'3.jpg', N'صالحی', N'http://salehi.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1396', N'فاطمه', 0, N'4.jpg', N'عظیمی', N'http://fatemeh66.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1396', N'نیلوفر', 0, N'5.jpg', N'آقایی', N'http://niloofar.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1396', N'علیرضا', 1, N'6.jpg', N'دیزجی', N'http://alireza107.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1396', N'محمد مهدی', 1, N'7.jpg', N'فردی', N'http://mmf.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1396', N'علی', 1, N'8.jpg', N'کاشانیان', N'http://ali1.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1396', N'امیرحسین', 1, N'1.jpg', N'برزگر', N'http://madrose.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1396', N'آریان', 1, N'2.jpg', N'آشنایی', N'http://techaa.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1396', N'علی', 1, N'3.jpg', N'دانشور', N'http://ali76.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1396', N'علی', 1, N'4.jpg', N'یمینی ', N'http://yamini.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1396', N'امیرحسام', 1, N'5.jpg', N'نجفی ', N'http://hesam.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1396', N'امیرحسین', 1, N'6.jpg', N'فارسی ', N'http://amirfarc.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1396', N'محمد', 1, N'7.jpg', N'ابراهیمی ', N'http://mohammade.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'مرداد 1396', N'آیناز', 0, N'8.jpg', N'محمدی ', N'http://mohammadi.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'دی 1396', N'ملیکا', 0, N'1.jpg', N'یدایی', N'http://melika.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'دی 1396', N'رضوانه', 0, N'2.jpg', N'خسرو آبادی', N'http://rzk.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'دی 1396', N'امیر رضا', 1, N'3.jpg', N'مرکزی', N'http://amzr.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'دی 1396', N'حسین', 1, N'4.jpg', N'فیضی', N'http://feizy.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'دی 1396', N'طیبه', 0, N'5.jpg', N'بختیاری', N'http://bakhtyary.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'بهمن 1396', N'شیرین', 0, N'6.jpg', N'مسیبی', N'http://mosayebi.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'بهمن 1396', N'مستوره', 0, N'7.jpg', N'قرائی', N'http://gharaei.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'بهمن 1396', N'علی', 1, N'8.jpg', N'بخشایشی', N'http://rithme.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'بهمن 1396', N'اشکان', 1, N'1.jpg', N'برهان احمدی', N'http://borhan.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'بهمن 1396', N'مونا', 0, N'2.jpg', N'عبدالهی', N'http://mona.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'بهمن 1396', N'یوسف', 1, N'3.jpg', N'شیوایی', N'http://yousef.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'بهمن 1396', N'مرجان ', 0, N'4.jpg', N'ترابی', N'http://mtorabi.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1397', N'بهاره', 0, N'5.jpg', N'باقری', N'http://bahar.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1397', N'سولماز ', 0, N'6.jpg', N'علیپور', N'http://comet.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1397', N'دارا', 1, N'7.jpg', N'مقدادی', N'http://dara.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1397', N'شهرزاد', 0, N'8.jpg', N'نظر زاده', N'http://shahrzad.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1397', N'یاسمن', 0, N'1.jpg', N'خدمتی', N'http://yaseman.emoh.ir')
+INSERT INTO [Students] ( [Course], [FirstName], [Gender], [ImageName], [LastName], [SiteUrl]) VALUES ( N'خرداد 1397', N'فاطمه سادات', 0, N'2.jpg', N'مدنی', N'http://fsm.emoh.ir')
+");
+        }
+
+        protected override void Down(MigrationBuilder migrationBuilder)
+        {
+            migrationBuilder.Sql("DELETE FROM [Students]");
+        }
+    }
+}
