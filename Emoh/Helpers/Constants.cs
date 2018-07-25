@@ -17,10 +17,10 @@ namespace Emoh.Helpers
         //=======================================================================================================================================================
         #region Remote
         //Suitable when we want to connect to db in server and app is in server - Use this for publishing
-        public static string RemoteEmohConnectionString = "data source=.;initial catalog=Emoh;User Id=EmohDbUser;Password=!Emoh@Db#User$123098";
+        public static string RemoteEmohConnectionString = "data source=.;initial catalog=Emoh;User Id=EmohDbUser;Password=xUax07#5";
 
         //Suitable when we want to connect to db in server and app is in local
-        public static string RemoteEmohConnectionString_WithIp = "data source=67.227.207.217;initial catalog=Emoh;User Id=EmohDbUser;Password=!Emoh@Db#User$123098";
+        public static string RemoteEmohConnectionString_WithIp = "data source=67.227.207.217;initial catalog=Emoh;User Id=EmohDbUser;Password=xUax07#5";
         #endregion
     }
 }
